@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import { TaskItem } from '../TaskItem';
+import { TaskListEmptyState } from '../TaskListEmptyState';
 
 interface ToDoListProps {
   tasks: string[];
@@ -21,8 +22,9 @@ export function ToDoList({ tasks, handleDeleteTask }: ToDoListProps) {
       </div>
 
       <div className={styles.tasks}>
-        {tasks.map((task, index) => (
+        {tasks.length > 0 ? tasks.map((task, index) => (
           <TaskItem
+            key={task}
             task={task}
             handleDelete={(wasChecked: boolean) => {
               wasChecked && setCheckedTasks(checkedTasks - 1);
@@ -30,7 +32,9 @@ export function ToDoList({ tasks, handleDeleteTask }: ToDoListProps) {
             }}
             postCheck={((isChecked: boolean) => isChecked ? setCheckedTasks(checkedTasks + 1) : setCheckedTasks(checkedTasks - 1))}
           />
-        ))}
+        )) : (
+          <TaskListEmptyState />
+        )}
       </div>
     </div>
   );

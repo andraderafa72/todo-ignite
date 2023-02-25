@@ -12,7 +12,8 @@ export function TaskItem({ task, handleDelete, postCheck }: TaskItemProps) {
   const [isChecked, setIsChecked] = useState(false);
 
   function handleCheckTask(event: any) {
-    if(event.target === buttonRef.current) return;
+    console.log(event.target === buttonRef.current)
+    if (event.target === buttonRef.current) return;
     setIsChecked(!isChecked);
     postCheck(!isChecked);
   }
@@ -24,7 +25,7 @@ export function TaskItem({ task, handleDelete, postCheck }: TaskItemProps) {
   return (
     <div className={styles.task} onClick={handleCheckTask}>
       <div className={styles.inputGroup}>
-        <input type="checkbox" name="" id={id} />
+        <input type="checkbox" name="" id={id} onChange={(e) => setIsChecked(e.target.checked)} />
         <label htmlFor={id} className={`${isChecked ? styles.checkbox : styles.emptyCircle}`}>
           {isChecked && <Check />}
         </label>
