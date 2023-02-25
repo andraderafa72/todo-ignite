@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: .5rem;
+
+  input,
+  button {
+    height: 3.25rem;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: .325rem;
+    padding: 1rem;
+    background: var(--blue-600);
+    color: var(--gray-100);
+    max-width: 5.625rem;
+    transition: .2s;
+
+    &:disabled {
+      cursor: not-allowed;
+      filter: brightness(.6);
+    }
+  }
+
+  input {
+    background: var(--gray-500);
+    padding-left: 1rem;
+    color: var(--gray-100);
+  }
+}

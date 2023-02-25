@@ -1,0 +1,38 @@
+.tasks {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createdTasks {
+  color: var(--blue-500);
+  font-size: 0.875rem;
+
+  span {
+    color: var(--gray-100);
+    background: var(--gray-400);
+    padding: .1rem .5rem;
+    border-radius: 8px;
+    font-size: .75rem;
+  }
+}
+
+.finishedTasks {
+  color: var(--purple-500);
+  font-size: 0.875rem;
+
+  span {
+    color: var(--gray-100);
+    background: var(--gray-400);
+    padding: .1rem .5rem;
+    border-radius: 8px;
+    font-size: .75rem;
+  }
+}
