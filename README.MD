@@ -5,10 +5,10 @@
 ## ToDo List
 
 <h4 align="center">
-  Podcastr is a platform built for podcast broadcasting.
+  An app made to manage tasks.
 </h4>
 
-![Podcastr preview](.github/app-preview.png)
+![ToDo List preview](.github/app-preview.png)
 
 ## Tecnologies
 This project was developed using cutting edge front-end technologies.
@@ -16,7 +16,6 @@ This project was developed using cutting edge front-end technologies.
 
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
-- [Next.js](https://nextjs.org/)
 
 ## 💻 Getting started
 
